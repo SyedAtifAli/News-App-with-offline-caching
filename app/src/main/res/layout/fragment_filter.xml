@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".views.fragments.FilterFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <com.github.captain_miao.optroundcardview.OptRoundCardView
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:optRoundCardCornerRadius="20dp"
+            app:optRoundCardLeftBottomCorner="false"
+            app:optRoundCardRightBottomCorner="false">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="100dp"
+                    android:layout_height="5dp"
+                    android:layout_margin="7dp"
+                    android:background="#808080"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/helvetica_neue_medium"
+                    android:text="Filter by sources"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    app:layout_constraintBottom_toTopOf="@+id/ls_apply"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/helvetica_neue_medium"
+                        android:lineSpacingExtra="8dp"
+                        android:text="CNN\nBBC\nWired\nReuters\nThe Guardian\nBusiness Insider\nStockNews.com"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="16sp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:gravity="end"
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    app:layout_constraintBottom_toTopOf="@+id/ls_apply"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/guideline2"
+                    app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+
+                    <CheckBox
+                        android:id="@+id/ss_c1"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:gravity="center" />
+
+                    <CheckBox
+                        android:id="@+id/ss_c2"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp" />
+
+                    <CheckBox
+                        android:id="@+id/ss_c3"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp" />
+
+                    <CheckBox
+                        android:id="@+id/ss_c4"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp" />
+
+                    <CheckBox
+                        android:id="@+id/ss_c5"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp" />
+
+                    <CheckBox
+                        android:id="@+id/ss_c6"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp" />
+
+                    <CheckBox
+                        android:id="@+id/ss_c7"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp" />
+                </LinearLayout>
+
+
+                <Button
+                    android:id="@+id/ls_apply"
+                    android:layout_width="110dp"
+                    android:layout_height="45dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/apply"
+                    android:textColor="#fff"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:flow_verticalBias="0.5"
+                    app:layout_constraintGuide_begin="205dp" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.github.captain_miao.optroundcardview.OptRoundCardView>
+    </RelativeLayout>
+</layout>

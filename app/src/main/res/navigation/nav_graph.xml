@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/newsListFragment">
+
+    <fragment
+        android:id="@+id/newsListFragment"
+        android:name="com.atif.revaliationnewspro.views.fragments.NewsListFragment"
+        android:label="Revaliation Pro"
+        tools:layout="@layout/fragment_news_list" >
+        <action
+            android:id="@+id/action_newsListFragment_to_filterFragment"
+            app:destination="@id/filterFragment" />
+        <action
+            android:id="@+id/action_newsListFragment_to_countryFragment"
+            app:destination="@id/countryFragment" />
+        <action
+            android:id="@+id/action_newsListFragment_to_newsDetailFragment"
+            app:destination="@id/newsDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
+    </fragment>
+    <dialog
+        android:id="@+id/filterFragment"
+        android:name="com.atif.revaliationnewspro.views.fragments.FilterFragment"
+        tools:layout="@layout/fragment_filter" >
+        <action
+            android:id="@+id/action_filterFragment_to_newsListFragment"
+            app:destination="@id/newsListFragment"
+            app:popUpTo="@id/newsListFragment"
+            app:popUpToInclusive="true" />
+    </dialog>
+    <dialog
+        android:id="@+id/countryFragment"
+        android:name="com.atif.revaliationnewspro.views.fragments.CountryFragment"
+        android:label="fragment_country"
+        tools:layout="@layout/fragment_country" >
+        <action
+            android:id="@+id/action_countryFragment_to_newsListFragment"
+            app:destination="@id/newsListFragment" />
+    </dialog>
+    <fragment
+        android:id="@+id/newsDetailFragment"
+        android:name="com.atif.revaliationnewspro.views.fragments.NewsDetailFragment"
+        android:label="News Detail"
+        tools:layout="@layout/fragment_news_detail">
+        <action
+            android:id="@+id/action_newsDetailFragment_to_newsListFragment"
+            app:destination="@id/newsListFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_right"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/newsListFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="headline"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="urltoimage"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="source"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="date"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="content"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="url"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="desc"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+</navigation>
